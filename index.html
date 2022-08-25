@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        merah: '#e52b2d',
+                        hitam: '#231f20'
+                    },
+                    fontFamily: {
+                        'font77': ['Manrope', ' sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body style="background-image: url('/img//dot-grid.jpg');">
+    <div class="container bg-merah mx-auto h-[100vh] relative overflow-clip">
+        <div class="atas flex items-center justify-center px-20">
+            <img src="img/logo77putih.png" alt="logo" class="w-80 hilangkan">
+            <!-- <h1 class="text-5xl font-extrabold text-white font-font77">DIRGAHAYU REPUBLIK INDONESIA KE - 77</h1> -->
+            <img src="img/G20 Indonesia 2022 putih.png" alt="g20" class="w-80 -ml-4 hilangkan">
+        </div>
+        <div class="relative hilangkan">
+            <img src="img/HUT RI 77_Gambar Panjat Pinang.png" alt="Panjat pinang" class="w-[800px] absolute">
+            <div class="w-[700px] absolute right-32 flex flex-wrap justify-center">
+
+                <h1
+                    class="text-white text-5xl font-font77 font-extrabold text-center mt-20 hover:scale-150 hover:transition  hover:duration-200 hover:ease-in">
+                    IKUTI
+                    PERLOMBAAN
+                    &
+                    MENANGKAN HADIAHNYA
+                </h1>
+                <button class="bg-hitam text-white text-xl font-bold p-5 mt-10 hover:scale-125 hover:transition-all"
+                    id="btn-ikuti-lomba">Mulai
+                    ikuti
+                    lomba</button>
+            </div>
+        </div>
+        <div class="munculkan hidden">
+            <h1 class="text-2xl text-white text-center mt-5">Jawablah pertanyaan dibawah ini dengan benar untuk
+                mendaptkan hadiah 17 Agustus: 😁</h1><br>
+            <form name="submit-to-google-sheet">
+                <div class="pl-10 pt-10 text-white">
+                    <label for="nama">Nama:</label>
+                    <input type="text" name="nama" id="nama" class="mb-5 text-hitam px-2 py-1"><br>
+                    <p>1. Siapakah yang menjahit bendera merah putih?</p>
+                      <input type="radio" id="ibu-fatmawati" name="pertanyaan1" value="ibu fatmawati">
+                      <label for="ibu-fatmawati">Ibu Fatmawati</label><br>
+                      <input type="radio" id="ibu-saya-sendiri" name="pertanyaan1" value="Ibu saya sendiri">
+                      <label for="ibu-saya-sendiri">Ibu saya sendiri</label><br>
+                      <input type="radio" id="ibu-kartini" name="pertanyaan1" value="ibu kartini">
+                      <label for="ibu-kartini">Ibu kartini</label>
+                    <br>
+                    <p>2. Tanggal 10 November diperingati sebagai hari?</p>
+                      <input type="radio" id="ibu" name="pertanyaan2" value="ibu">
+                      <label for="ibu">Ibu</label><br>
+                      <input type="radio" id="ayah" name="pertanyaan2" value="ayah">
+                      <label for="ayah">Ayah</label><br>
+                      <input type="radio" id="pahlawan" name="pertanyaan2" value="pahlawan">
+                      <label for="pahlawan">Pahlawan</label>
+                    <p>3. Siapakah yang menandatangani teks proklamasi indonesia?</p>
+                      <input type="radio" id="soekarna" name="pertanyaan3" value="soekarna">
+                      <label for="soekarna">Soekarno</label><br>
+                      <input type="radio" id="soekarno-dan-moh.Hatta" name="pertanyaan3" value="soekarno dan moh.Hatta">
+                      <label for="soekarno-dan-moh.Hatta">Soekarno dan moh.Hatta</label><br>
+                      <input type="radio" id="mohHatta" name="pertanyaan3" value="mohHatta">
+                      <label for="mohHatta">Moh Hatta</label>
+                    <p>4. Apa makna bhineka tunggal ika?</p>
+                      <input type="radio" id="bhineka1" name="pertanyaan4" value="walaupun berbeda tetap satu jua">
+                      <label for="bhineka1">walaupun berbeda tetap satu jua</label><br>
+                      <input type="radio" id="bhineka2" name="pertanyaan4" value="walaupun berbeda tetap satu aja">
+                      <label for="bhineka2">walaupun berbeda tetap satu aja</label><br>
+                      <input type="radio" id="bhineka3" name="pertanyaan4" value="walaupun berbeda tetap negara nkri">
+                      <label for="bhineka3">walaupun berbeda tetap negara NKRI</label>
+                    <p>5. Jepang mulai menjajah indonesia pada tahun?</p>
+                      <input type="radio" id="jepang1" name="pertanyaan5" value="1942">
+                      <label for="jepang1">1942</label><br>
+                      <input type="radio" id="jepang2" name="pertanyaan5" value="1945">
+                      <label for="jepang2">1945</label><br>
+                      <input type="radio" id="jepang3" name="pertanyaan5" value="1943">
+                      <label for="jepang3">1943</label><br>
+                    <input type="text" id="skor" name="skor" class="text-hitam hidden" value="0">
+                    <button class="p-3 bg-hitam text-white font-semibold mt-8 hover:bg-hitam/90" type="submit"
+                        id="kirim">Kirim
+                        Jawaban</button>
+                </div>
+            </form>
+        </div>
+        <div class="klasmen hidden">
+            <button class="p-4 text-white text-2xl" onclick="window.location.reload()">👈Kembali</button>
+            <h1 class="text-5xl my-10 text-center text-white">Skor Akhir 😁</h1>
+        </div>
+        <img src="img/HUT RI 77_Elemen Grafis Putih_Horizontal_2.png" alt="element"
+            class="absolute bottom-0 right-0 w-[500px]">
+    </div>
+    <script src="sweetalert2.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('#btn-ikuti-lomba').click(function (e) {
+                e.preventDefault();
+                $('.hilangkan').addClass('hidden')
+                $('.munculkan').removeClass('hidden')
+            });
+            //========( end kode )========>
+            $('input[type=radio][name="pertanyaan1"]').on('change', function () {
+                hitNilai()
+            });
+            $('input[type=radio][name="pertanyaan2"]').on('change', function () {
+                hitNilai()
+            });
+            $('input[type=radio][name="pertanyaan3"]').on('change', function () {
+                hitNilai()
+            });
+            $('input[type=radio][name="pertanyaan4"]').on('change', function () {
+                hitNilai()
+            });
+            $('input[type=radio][name="pertanyaan5"]').on('change', function () {
+                hitNilai()
+            });
+
+            function hitNilai() {
+                const benar = ['ibu fatmawati', 'pahlawan', 'soekarno dan moh.Hatta',
+                    'walaupun berbeda tetap satu jua', '1942'
+                ]
+                const jaw1 = $('input[name="pertanyaan1"]:checked').val()
+                const jaw2 = $('input[name="pertanyaan2"]:checked').val()
+                const jaw3 = $('input[name="pertanyaan3"]:checked').val()
+                const jaw4 = $('input[name="pertanyaan4"]:checked').val()
+                const jaw5 = $('input[name="pertanyaan5"]:checked').val()
+                const jawaban = [jaw1, jaw2, jaw3, jaw4, jaw5]
+                let nilai = 0;
+                for (let i = 0; i < jawaban.length; i++) {
+                    if (jawaban[i] == benar[i]) {
+                        nilai += 20
+                    }
+                }
+                $('#skor').val(nilai)
+            }
+
+            //========( batas kode posting )========>
+            const scriptURL =
+                'https://script.google.com/macros/s/AKfycbwRHO4ZySNrkhH4WZ6we-6_1r6CYGS76hdN2HlhFOXZ3LgHiyhQDKSoVoYNP1axA2ZnGQ/exec'
+            const form = document.forms['submit-to-google-sheet']
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, {
+                        method: 'POST',
+                        body: new FormData(form)
+                    })
+                    .then((response => {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Alhamdulillah',
+                            text: 'Jawaban berhasil dikirim'
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                Swal.fire('Saved!', '', 'success')
+                                $('.munculkan').addClass('hidden')
+                                $('.klasmen').removeClass('hidden')
+                                ambilData()
+                            } else if (result.isDenied) {
+                                Swal.fire('Changes are not saved', '', 'info')
+                            }
+                        })
+                    }))
+                    .catch(error => console.error('Error!', error.message))
+            })
+
+            function ambilData() {
+                const benar = ['ibu fatmawati', 'pahlawan', 'soekarno dan moh.Hatta',
+                    'walaupun berbeda tetap satu jua', '1942'
+                ]
+                $('.hilangkan').addClass('hidden')
+                $('.klasmen').removeClass('hidden')
+                fetch('https://sheetdb.io/api/v1/wcy7frv3l1hc7')
+                    .then(response => response.json())
+                    .then(result => {
+                        let html = ''
+                        result.forEach(r => {
+                            html += `<div class="mx-auto w-[600px] mx-auto mb-5 ">
+                                            <label for="nama" class="text-white text-3xl text-left">${r.nama}</label><br>
+                                            <input type="range" min="1" max="100" value="${r.skor}" class="slider w-[500px]" id="myRange">
+                                            <label for="nama" class="text-white text-2xl">${r.skor}</label><br>
+                                            <label htmlFor="x">${(r.pertanyaan1==benar[0])?'✅':'❎'}</label>
+                                            <label htmlFor="x">${(r.pertanyaan2==benar[1])?'✅':'❎'}</label>
+                                            <label htmlFor="x">${(r.pertanyaan3==benar[2])?'✅':'❎'}</label>
+                                            <label htmlFor="x">${(r.pertanyaan4==benar[3])?'✅':'❎'}</label>
+                                            <label htmlFor="x">${(r.pertanyaan5==benar[4])?'✅':'❎'}</label>
+                                        </div>`
+                        });
+                        $('.klasmen').append(html)
+                    })
+            }
+
+        });
+    </script>
+</body>
+
+</html>
